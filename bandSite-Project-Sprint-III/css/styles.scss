@@ -1,0 +1,15 @@
+//For Desktop screen size
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "./partials/header";
+@import "./partials/root";
+@import "./partials/music";
+@import "./partials/gallery";
+@import "./partials/comment";
+@import "./partials/show";
+@import "./partials/footer";
+
+//===========================
+@import "./tablet-styles/tablet";
+@import "./mobile-styles/mobile";
+

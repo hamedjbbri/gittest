@@ -1,0 +1,103 @@
+
+  footer {
+    background-color: $color-black;
+    padding: 48px 0;
+  }
+
+  .footer {
+    width: 1080px;
+    margin: 0 auto;
+    color: $color-white;
+
+    &__row1 {
+      display: flex;
+      position: relative;
+      align-items: center;
+      margin-bottom: 56px;
+
+      &--header {
+        @include header1-desktop();
+        margin: 0 60px 0 0;
+      }
+
+      &--icons i {
+        width: 26px;
+        height: 26px;
+        display: inline-block;
+        margin-right: 32px;
+      }
+
+      &--icons i:first-child {
+        background: url(../assets/Icons/PNG/Icon-instagram.png) no-repeat 3px 3px;
+      }
+
+      &--icons i:nth-child(2) {
+        background: url(../assets/Icons/PNG/Icon-facebook.png) no-repeat 3px 3px;
+      }
+
+      &--icons i:nth-child(3) {
+        background: url(../assets/Icons/PNG/Icon-twitter.png) no-repeat 3px 3px;
+      }
+
+      &--brand {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        position: absolute;
+        right: 40px;
+        letter-spacing: 1px; //Adjust it in a way that makes width of the brand 120px as mentioned in the mock up
+      }
+    }
+
+    &__row2 {
+      display: flex;
+      justify-content: flex-start;
+      
+      h3 {
+        font-weight: 500;
+        @include header3-desktop();
+        margin-bottom: 24px;
+      }
+
+      &--left, &--middle{
+        margin-right: 60px;
+      }
+
+      &--left h3:first-child,
+      &--middle h3:first-child,
+      &--right h3:first-child {
+        margin: 0;
+      }
+
+      &--left h3:nth-child(2),
+      &--middle h3:nth-child(2),
+      &--right h3:nth-child(2)
+      {
+        margin-top: 0;
+      }
+
+      &--left p,
+      &--middle p,
+      &--right p
+      {
+        margin: 0;
+      }
+    }
+
+    &__row3 {
+      p {
+        font-size: 14px;
+        margin: 40px 0 0 0;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-white;
+      margin-top: 24px;
+      display: inline-block;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }

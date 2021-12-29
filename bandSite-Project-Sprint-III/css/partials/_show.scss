@@ -1,0 +1,55 @@
+.show {
+  padding: 48px 180px;
+  display: flex;
+
+  &__left {
+    width: 276px;
+
+    &--header{
+      font-size: 36px;
+    }
+  }
+
+  &__right {
+    width: 804px;
+
+    &--mobile-th{
+      display: none;
+    }
+
+    &--table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    &--table tbody tr {
+      border-bottom: 1px solid $color-silver;
+    }
+
+    &--table tbody td {
+      padding: 0;
+      width: 201px;
+    }
+
+    &--table tbody td:last-child {
+      text-align: right;  //Takes the button to the right
+    }
+
+    &--header {
+      text-align: left;
+      color: $color-silver;
+      font-weight: normal;
+      font-size: 12px;
+    }
+
+    &--date {
+      font-weight: 500;
+    }
+
+    &--btn {
+      @include button();
+      position: static;
+      margin-bottom: 16px;
+    }
+  }
+}

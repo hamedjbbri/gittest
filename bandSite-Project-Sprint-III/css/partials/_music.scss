@@ -1,0 +1,62 @@
+.music {
+  width: 896px;
+  margin: auto;
+
+  &__top {
+    &--header1 {
+      @include header1-desktop();
+       margin: 48px 0;
+       position: relative;
+       left: -92px; //based on screen size 1440px => 1440 - 896 = 544 , 544/2 = 272px is the distance from the left of screen , 272- 180 = 92px;
+    }
+
+    &--image{
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      opacity: 0;
+    }
+
+
+    &.js--wp-1 {
+      opacity: 1;
+    }
+
+    &--header2{
+      @include header2-desktop();
+      margin: 48px 0 40px 0;
+      width: 800px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    &--bottomHeader2 {
+      @include header2-desktop();
+      margin: 56px 0 32px 0;
+    }
+
+    &--musician {
+      font-weight: bold;
+    }
+
+  } //End of music__top
+
+  &__bottom {
+    display: flex;
+
+    &--left {
+      width: 420px;
+      margin-right: 40px;
+    }
+
+    &--right {
+      width: 420px;
+    }
+
+    p {
+      margin: 0 0 48px 0;
+    }
+  }
+}

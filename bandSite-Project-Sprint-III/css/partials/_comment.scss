@@ -1,0 +1,145 @@
+
+.comment {
+  width: 1080px;
+  padding: 48px 0 40px 0;
+  margin: 0 auto;
+
+  &__alert {
+    padding: 10px;
+    background: $color-alert-background;
+    border: 2px solid $color-red;
+    color: $color-red;
+    border-radius: 4px;
+    margin: 30px auto;
+    width: 350px;
+    text-align: center;
+  }
+
+  &__header {
+    @include header1-desktop();
+    margin: 0 0 56px 0;
+  }
+
+  &__form {
+    width: 528px;
+    margin: 0 auto;
+
+    label {
+      color: $color-silver;
+      position: relative;
+      left: 70px;
+      font-size: 75%;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    &--name {
+      display: flex;
+      margin: 0 0 24px 0;
+    }
+
+    &--name img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    &--name input {
+      @include input-style(48px, 0, 460px);
+    }
+
+    &--name input:focus, &--text textarea:focus  {
+      @include input-active();
+    }
+
+    &--text textarea {
+      @include input-style(96px, 16px, 428px); //460px - 2*15px (padding) = 428px
+      margin-left: 68px;
+    }
+
+    &--btn{
+      @include button();
+    }
+  }
+
+  &__content {
+    border-top: 1px solid $color-mercury;
+    width: 528px;
+    margin: 0 auto;
+    padding: 24px 0;
+    display: flex;
+    position: relative;
+
+    &:last-child {
+      border-bottom: 1px solid $color-mercury;
+    }
+
+    &--left {
+      width: 48px;
+      margin-right: 16px;
+      height: 48px;
+    }
+
+    &--imageSpan {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: $color-silver;
+
+    }
+
+    &--right {
+      width: 464px; //528-46-16
+    }
+
+    &--name {
+      display: inline-block;
+      margin-right: 16px;
+      font-weight: 500;
+    }
+
+    &--date {
+      color: $color-silver;
+    }
+
+    &--text {
+      margin-bottom: 0;
+    }
+
+    &--span {
+        width: 20px;
+        height: 20px;
+        background: url(../assets/Icons/PNG/like.png) 0 0 no-repeat;
+        float: right;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    &--span:hover {
+      background: url(../assets/Icons/PNG/like-hover.png) 0 0 no-repeat;
+    }
+
+    &--likeCount {
+      float: right;
+    }
+
+    &--remove {
+      width: 15px;
+      height: 15px;
+      display: inline-block;
+      background: url(../assets/Icons/PNG/remove.png) 0 0 no-repeat;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+    }
+
+    &--remove:hover {
+      background: url(../assets/Icons/PNG/remove-hover.png) 0 0 no-repeat;
+    }
+
+  }
+}
+

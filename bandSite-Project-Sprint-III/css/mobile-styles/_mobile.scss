@@ -1,0 +1,274 @@
+@media (max-width: $mobile) {
+
+  .header__top {
+    padding-left: 0;
+    flex-direction: column;
+
+    &--logo {
+      margin-top: 10px;
+    }
+
+    &--navList {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    &--navList .active {
+      padding-bottom: 0;
+    }
+
+    &--navList li {
+      margin: 0;
+      width: 160px;
+      text-align: center;
+    }
+
+    &--navList li a {
+      width: 100%;
+    }
+
+    &--navList li a:hover {
+      padding-bottom: 0;
+    }
+  }
+
+  .header__bottom {
+    height: 183px;
+
+    &--heading {
+      padding-left: 16px;
+      font-size: 24px;
+      line-height: 32px;
+      width: 210px;
+    }
+  }
+
+  .header__bottom-show {
+    &--iframe {
+
+    }
+
+    &--text {
+      font-size: 16px;
+      font-weight: normal;
+      top: 64px;
+    }
+
+    &--heading {
+      width: 288px;
+      font-size: 36px;
+      line-height: 60px;
+      top: 110px;
+    }
+  }
+  
+  .music {
+    width: 320px;
+  
+
+  &__top {
+    width: 288px;
+    margin: auto;
+
+    &--header1{
+      @include header1-mobile();
+      margin: 32px 0 24px 0;
+    }
+
+    &--header2{
+      @include header2-mobile();
+      margin: 24px 0 32px 0;
+  
+    }
+
+    &--musician {
+      margin: 0 0 40px 0;
+    }
+
+    &--bottomHeader2 {
+      @include header2-mobile();
+      margin: 40px 0 24px 0;
+    }
+  } 
+
+  &__bottom {
+    flex-direction: column;
+    width: 288px;
+    margin-left: 16px;
+
+    &--left, &--right {
+      width: 100%;
+    }
+
+    p {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+  .photoGallery__box {
+    width: 304px;
+    margin-left: 16px;
+
+    &--header {
+      font-size: 24px;
+      line-height: 32px;
+      padding: 32px 0 24px 0;
+      width: 288px;
+    }
+
+    &--images {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    &--images figure:not(:nth-child(3n)) {  // Chooses all elements expect the ones which are multiply of 3
+      margin: 0 16px 16px 0;
+    }
+
+    &--images figure {
+      width: 288px;
+      height: 145px;
+      margin: 0 16px 16px 0;
+    }
+  }
+
+  .comment {
+    width: 288px;
+
+    &__header {
+      @include header2-desktop();
+    }
+
+    &__form {
+      width: 100%;
+
+      &--name input {
+        width: 224px;
+      }
+
+      &--text textarea, &--text{
+        width: 194px;  //224 - 15*2 (padding)
+      }
+
+      &--btn {
+        left: 70px;
+        width: 224px;
+      }
+    }
+
+    &__content {
+      width: 288px;
+      
+
+      &--left {
+        width: 70px;
+        height: 40px;
+      }
+    }
+  }
+
+  footer {
+    width: 320px;
+
+    .footer {
+      width: 288px;
+
+      &__row1 {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &--header {
+          @include header1-mobile();
+        }
+
+        &--brand {
+          display: none;
+        }
+
+        &--icons {
+          margin-top: 10px;
+        }
+      }
+
+      &__row2 {
+        flex-direction: column;
+
+        p, a {
+          font-weight: 100;
+        }
+
+        a {
+          margin: 24px 0;
+        }
+      }
+
+      &__row3 p{
+        font-weight: 100;
+        width: 220px;
+      }
+    }
+  }
+
+  .header__bottom-show {
+    &--iframe {
+      width: 288px;
+      left: 15px;
+    }
+  }
+
+  .show {
+    width: 288px;
+    padding: 32px 16px;
+
+    &__left--header {
+      margin: 0 0 40px 0;
+     width: 100%;
+    }
+
+    &__right {
+      width: 288px;
+
+      &--table thead {
+        display: none;
+      }
+
+      &--table, tr {
+        display: inline-grid;
+        width: 100%;
+        padding-top: 16px;
+      }
+
+      &--table td:last-child{
+        width: 100%;
+      }
+
+      &--table td:nth-child(6){
+        margin-bottom: 32px;
+      }
+
+      &--table thead th {
+        display: none;
+      }
+
+      &--table tbody td {
+        margin-bottom: 24px;
+      }
+
+      &--mobile-th{
+        display: block;
+        color: $color-silver;
+        font-weight: normal;
+        text-align: left;
+        margin-bottom: 16px;
+      }
+
+      &--btn {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}
+

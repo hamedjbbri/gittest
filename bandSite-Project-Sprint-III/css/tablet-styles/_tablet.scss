@@ -1,0 +1,101 @@
+@media (max-width: $tablet) {
+  .header {
+    &__top {
+      padding-left: 24px;
+    }
+
+    &__bottom {
+      height: 400px;
+
+      &--heading {
+        padding-left: 3.125%;
+        width: none;
+        display: block;
+      }
+    }
+
+    &__bottom-show {
+      position: relative;
+      &--text {
+        position: absolute;
+        top: 96px;
+        left: 24px;
+        margin: 0;
+      }
+
+      &--heading {
+      top: 150px;
+      padding-left: 24px;
+      }
+
+      &--iframe {
+        left: 24px;
+        bottom: 50px;
+      }
+    }
+  }
+
+  .music {
+    width: 720px;
+
+    &__top {
+
+      &--header1 {
+        left: 0;
+      }
+      &--header2 {
+        width: 100%;
+      }
+
+      &--image {
+        height: 362px;
+      }
+    }
+   
+
+    &__bottom--left {
+      margin-right: 24px;
+      }
+}
+
+.photoGallery__box {
+  width: 720px; //224*3 + 2*24
+
+  &--images figure {
+    width: 224px;
+    height: 126px;
+  }
+}
+
+.comment {
+  width: 720px;
+}
+
+footer {
+  .footer {
+    width: 720px;
+    &__row1--brand {
+      font-size: 1.5em;
+  }
+  }
+ }
+
+ .show {
+  flex-direction: column;
+  padding: 48px 24px;
+
+  &__left--header{
+    width: 720px;
+  }
+
+  &__right{
+    width: 720px;
+
+    &--table {
+      width: 100%;
+    }
+  }
+ 
+}
+}
+

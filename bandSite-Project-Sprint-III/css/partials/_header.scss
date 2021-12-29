@@ -1,0 +1,127 @@
+.header {
+  background: $color-black;
+
+  &__top {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-left: 180px;
+
+    nav {
+      height: 100%;
+    }
+
+    &--navList {
+      list-style: none;
+      display: flex;
+      padding-left: 56px;
+      line-height: 40px;
+      margin-top: 20px;
+    }
+
+    &--navList li {
+      margin-right: 56px;
+    }
+
+    &--navList a {
+      color: $color-silver;
+      text-decoration: none;
+      display: inline-block;
+      width: 80px;
+      text-align: center;
+    }
+
+    &--navList .active {
+      border-bottom: 4px solid $color-white;
+      padding-bottom: 15px;
+      color: $color-white;
+    }
+
+    //Hover effects
+    &--logo:hover {
+      animation: bounceLogo 1s;
+      animation-timing-function: ease-in-out;
+    }
+
+    &--navList a:hover {
+      color: $color-hover;
+      border-bottom: 4px solid $color-hover;
+      padding-bottom: 15px;
+
+    }
+  }
+
+  &__bottom-show {
+    @include header-bottom();
+    background-image: linear-gradient(to left, rgba($color-black,0.4), rgba($color-black,0.4) ), url(../assets/Images/music.jpg);
+    position: relative;
+
+    &--iframe {
+      width: 436px;
+      height: 146px;
+      position: absolute;
+      right: 180px;
+    }
+
+    &--text {
+      color: $color-white;
+      position: absolute;
+      @include header2-desktop();
+      font-weight: bold;
+      top: 160px;
+      left: 180px;
+      margin: 0;
+    }
+
+    &--heading {
+      position: absolute;
+      top: 224px;
+      @include main-header();
+    }
+  }
+
+  &__bottom {
+    @include header-bottom();
+    background-image: linear-gradient(to left, rgba($color-black,0.5), rgba($color-black,0.5) ), url(../assets/Images/hero.jpg);
+
+
+    &--heading {
+      @include main-header();
+    }
+  }
+}
+
+//Animation for logo
+@keyframes bounceLogo {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes moveHorizontal {
+  0% {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+
+  75% {
+    opacity: 0.7;
+    transform: translateX(200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

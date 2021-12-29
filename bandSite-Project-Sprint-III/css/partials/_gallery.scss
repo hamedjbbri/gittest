@@ -1,0 +1,48 @@
+.photoGallery {
+  background: $color-alabaster;
+
+  &__box {
+    width: 1080px; // 344*3 + 2*24 = 1080px
+    margin: 0 auto;
+    padding-bottom: 40px;
+
+    &--header {
+      padding: 48px 0 64px 0;
+      margin: 0;
+      @include header1-desktop();
+    }
+
+    &--images {
+      display: flex;
+      flex-wrap: wrap;
+      opacity: 0;
+    }
+
+
+    &--images figure {
+      width: 344px;
+      height: 193px;
+      margin: 0;
+      overflow: hidden;
+      background: $color-black;
+    }
+      
+    &--images figure:not(:nth-child(3n)) {  // Chooses all elements expect the ones which are multiply of 3
+      margin: 0 24px 24px 0;
+    }
+      
+    &--images img {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      width: 100%;
+      transform: scale(1.2);
+      transition: transform 0.5s, opacity 0.5s;      
+    }
+
+    &--images img:hover {
+      transform: scale(1);
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+    }   
+        }
+    }
